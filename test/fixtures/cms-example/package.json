@@ -1,0 +1,4 @@
+{
+  "name": "cms-example",
+  "main": "server/server.js"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "tenant",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "hidden": [
+    "id", "active"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "key": {
+      "type": "string",
+      "required": false
+    },
+    "active": {
+      "type": "boolean",
+      "required": false,
+      "default": true
+    }
+  },
+  "mixins": {
+    "TimeStamp" : {
+      "createdAt" : "createdOn",
+      "updatedAt" : "updatedOn",
+      "required" : false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

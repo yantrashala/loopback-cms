@@ -1,0 +1,39 @@
+{
+  "name": "content",
+  "plural": "content",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "tenantKey": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "data": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "mixins": {
+    "TimeStamp" : {
+      "createdAt" : "createdOn",
+      "updatedAt" : "updatedOn",
+      "required" : false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "hidden": [
+    "tenantKey",
+    "id"
+  ],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
